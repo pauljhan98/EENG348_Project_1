@@ -31,28 +31,28 @@ start_of_assembly:
    ;       r24 = a, r25 = b
    ;
 
-push r16  ; We choose to follow the caller convention in this code
-push r17  ; r16 and r17 are saved to the stack
+push r18  ; We follow the caller convention in this code
+push r19  ; r18 and r19 are saved to the stack
 
 call sumval
 call diffval
 
-add r24, r16 ; This preforms sumval() + diffval()
-mov r25, r17 ; If there is a carry from sumval, include it here
+add r24, r18 ; This preforms sumval() + diffval()
+mov r25, r19 ; If there is a carry from sumval, include it here
 adc r25, r1  ; If there is a carry from sumval() + diffval(), include it here
 
-pop r17   ; Restore r17 to its original value before the function calls
-pop r16   ; Restore r16 to its original value before the function calls
+pop r19   ; Restore r19 to its original value before the function calls
+pop r18   ; Restore r18 to its original value before the function calls
 
 rjmp end_of_assembly
 
 
 
-sumval: mov r16, r24
-        mov r17, r25
-        add r16, r17 ;adds register 17 to register 16 and saved it to r16. May or may not flag carry bit
-        mov r17, r1  ;sets r17 to 0
-        adc r17, r1  ; if carry flag is set, adds 1 to the operation of adding 0 to r17, if not, simply adds 0 and r17
+sumval: mov r18, r24
+        mov r19, r25
+        add r18, r19 ;adds register 19 to register 18 and saved it to r18. May or may not flag carry bit
+        mov r19, r1  ;sets r17 to 0
+        adc r19, r1  ; if carry flag is set, adds 1 to the operation of adding 0 to r19, if not, simply adds 0 and r19
         ret
 
 

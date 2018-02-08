@@ -11,6 +11,11 @@ void setup() {
   Serial.println(testasm(255, 255));
   Serial.print("The sum of 0 and 0 is: ");
   Serial.println(testasm(0, 0));
+  Serial.print("The sum of 10 and 10 is: ");
+  Serial.println(testasm(10, 10));
+  Serial.print("The sum of 1 and 1 is: ");
+  Serial.println(testasm(1, 1));
+  
   
   pinMode (13, OUTPUT);
 }

@@ -30,9 +30,9 @@ start_of_assembly:
    ;  --- YOUR CODE GOES HERE ---
    ;       r24 = a, r25 = b
    ;
-   add r24, r25 //adds register 25 to register 24 and saved it to r24. May or may not flag carry bit
-   mov r25, r1 //sets r25 to 0
-   adc r25, r1 // if carry flag is set, adds 1 to the operation of adding 0 to r25, if not, simply adds 0 and r25
+   add r24, r25 ;adds register 25 to register 24 and saved it to r24. May or may not flag carry bit
+   mov r25, r1  ;sets r25 to 0
+   adc r25, r1  ; if carry flag is set, adds 1 to the operation of adding 0 to r25, if not, simply adds 0 and r25
 
 
    ;
